@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary">
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="129dp"
+        android:layout_height="74dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/regLin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/watchit_logo" />
+
+    <LinearLayout
+        android:id="@+id/regLin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|center_vertical"
+        android:paddingBottom="10dp"
+        android:paddingHorizontal="10dp"
+        android:layout_marginHorizontal="32dp"
+        android:background="@drawable/rounded_buttons"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2">
+
+        <TextView
+            android:id="@+id/tvCreateAcc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:textStyle="bold"
+            android:layout_marginBottom="16dp"
+            android:text="Create an Acccount"
+            android:textAlignment="center"
+            android:textColor="@color/colorText"
+            android:textSize="24dp" />
+
+        <EditText
+            android:id="@+id/etUsername"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/rounded_stroke_buttons"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:paddingHorizontal="16dp"
+            android:hint="Username"
+            android:textColorHint="#BCE0FD"
+            android:textColor="#BCE0FD" />
+
+        <EditText
+            android:id="@+id/etEmail"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/rounded_stroke_buttons"
+            android:ems="10"
+            android:inputType="textEmailAddress"
+            android:paddingHorizontal="16dp"
+            android:hint="Email@email.com"
+            android:textColorHint="#BCE0FD"
+            android:textColor="#BCE0FD" />
+
+        <EditText
+            android:id="@+id/etPassword"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/rounded_stroke_buttons"
+            android:ems="10"
+            android:inputType="textPassword"
+            android:paddingHorizontal="16dp"
+            android:hint="Password"
+            android:textColorHint="#BCE0FD"
+            android:textColor="#BCE0FD" />
+
+        <EditText
+            android:id="@+id/etConfirmPassword"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/rounded_stroke_buttons"
+            android:ems="10"
+            android:inputType="textPassword"
+            android:paddingHorizontal="16dp"
+            android:hint="Confirm Password"
+            android:textColorHint="#BCE0FD"
+            android:textColor="#BCE0FD" />
+
+        <TextView
+            android:id="@+id/tvLogin2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="32dp"
+            android:layout_marginTop="6dp"
+            android:lineSpacingExtra="6dp"
+            android:text="Already have an account? Login \n By creating an account you agree to our \n Terms of Service and Privacy Policy"
+            android:textAlignment="center"
+            android:textColor="@color/colorText"
+            android:textSize="8dp" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnRegister"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="16dp"
+        android:text="Register"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/regLin"
+        android:background="@drawable/rounded_push_buttons"
+        android:textColor="@color/colorForm"
+        />
+
+
+</android.support.constraint.ConstraintLayout>

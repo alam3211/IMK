@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@color/colorPrimary">
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/ViewPager"
+        android:layout_width="match_parent"
+        android:layout_height="547dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="50dp"
+        android:clipToPadding="false"
+        android:foregroundGravity="center"
+        android:overScrollMode="never"></android.support.v4.view.ViewPager>
+
+    <LinearLayout
+        android:id="@+id/llBrowse1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="-6dp"
+        android:layout_marginBottom="19dp"
+        android:background="@color/colorBack"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingHorizontal="20dp"
+        android:paddingVertical="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/btRate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="6dp"
+                android:background="@drawable/rounded_red_buttons"
+                android:drawableStart="@drawable/ic_star_white_24dp"
+                android:drawablePadding="6dp"
+                android:gravity="center"
+                android:paddingHorizontal="10dp"
+                android:text="Rate It"
+                android:textColor="#fff" />
+
+            <Button
+                android:id="@+id/btReview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="6dp"
+                android:background="@drawable/rounded_brown_buttons"
+                android:drawableStart="@drawable/ic_rate_review_black_24dp"
+                android:drawablePadding="6dp"
+                android:gravity="center"
+                android:paddingHorizontal="10dp"
+                android:text="Review"
+                android:textColor="#fff" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/btWatched"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="6dp"
+                android:background="@drawable/rounded_black_buttons"
+                android:drawableStart="@drawable/ic_remove_red_eye_black_24dp"
+                android:drawablePadding="6dp"
+                android:gravity="center"
+                android:paddingHorizontal="10dp"
+                android:text="Watched"
+                android:textColor="#fff" />
+
+            <Button
+                android:id="@+id/btWatchlist"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="6dp"
+                android:background="@drawable/rounded_push_buttons"
+                android:drawableStart="@drawable/ic_playlist_add_black_24dp"
+                android:drawablePadding="6dp"
+                android:gravity="center"
+                android:paddingHorizontal="10dp"
+                android:text="Watchlist"
+                android:textColor="#fff" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>
