@@ -1,4 +1,4 @@
-package com.example.watchit;
+package com.example.watchit.Activity;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -11,7 +11,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import java.util.regex.Pattern;
+import com.example.watchit.R;
 
 public class RegisterActivity extends AppCompatActivity {
     EditText etUsername, etEmail, etPassword, etConfirmPassword;

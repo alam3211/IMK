@@ -1,4 +1,4 @@
-package com.example.watchit;
+package com.example.watchit.Activity;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -7,6 +7,11 @@ import android.support.design.widget.BottomNavigationView;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
+
+import com.example.watchit.Fragment.BrowseFragment;
+import com.example.watchit.Fragment.HomeFragment;
+import com.example.watchit.Fragment.ProfileFragment;
+import com.example.watchit.R;
 
 public class IndexActivity extends AppCompatActivity {
     @Override

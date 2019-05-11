@@ -1,4 +1,4 @@
-package com.example.watchit;
+package com.example.watchit.Adapter;
 
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
@@ -8,7 +8,8 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import org.w3c.dom.Text;
+import com.example.watchit.Model.HomeData;
+import com.example.watchit.R;
 
 public class HomeAdapter extends RecyclerView.Adapter {
     @NonNull

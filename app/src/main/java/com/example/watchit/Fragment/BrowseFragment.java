@@ -1,4 +1,4 @@
-package com.example.watchit;
+package com.example.watchit.Fragment;
 
 import android.animation.ArgbEvaluator;
 import android.os.Bundle;
@@ -10,9 +10,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.watchit.Adapter.AdapterCard;
+import com.example.watchit.Model.Card;
+import com.example.watchit.R;
+
 import java.util.ArrayList;
 import java.util.List;
-import java.util.zip.Inflater;
 
 public class BrowseFragment extends Fragment {
 

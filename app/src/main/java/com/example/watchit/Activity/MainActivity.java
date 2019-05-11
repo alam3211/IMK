@@ -1,4 +1,4 @@
-package com.example.watchit;
+package com.example.watchit.Activity;
 
 import android.content.Intent;
 import android.graphics.Typeface;
@@ -14,6 +14,8 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.example.watchit.R;
 
 public class MainActivity extends AppCompatActivity {
 

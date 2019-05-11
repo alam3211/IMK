@@ -1,4 +1,4 @@
-package com.example.watchit;
+package com.example.watchit.Activity;
 
 import android.content.Intent;
 import android.os.Bundle;

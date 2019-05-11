@@ -1,4 +1,4 @@
-package com.example.watchit;
+package com.example.watchit.Model;
 
 public class Card {
 

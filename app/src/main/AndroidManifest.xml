@@ -10,22 +10,22 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-        <activity android:name=".SplashActivity" android:theme="@style/SplashTheme">
+        <activity android:name=".Activity.SplashActivity" android:theme="@style/SplashTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity"/>
+        <activity android:name=".Activity.MainActivity"/>
 
-        <activity android:name=".IndexActivity" />
+        <activity android:name=".Activity.IndexActivity" />
 
-        <activity android:name=".RegisterActivity" />
+        <activity android:name=".Activity.RegisterActivity" />
 
-        <activity android:name=".DetailActivity"/>
+        <activity android:name=".Activity.DetailActivity"/>
 
-        <activity android:name=".EditActivity"/>
+        <activity android:name=".Activity.EditActivity"/>
     </application>
 
 </manifest>

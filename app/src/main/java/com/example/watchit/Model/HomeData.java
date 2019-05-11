@@ -1,4 +1,6 @@
-package com.example.watchit;
+package com.example.watchit.Model;
+
+import com.example.watchit.R;
 
 public class HomeData {
 
