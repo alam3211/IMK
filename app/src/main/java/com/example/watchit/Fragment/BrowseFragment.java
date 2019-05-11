@@ -1,6 +1,7 @@
 package com.example.watchit.Fragment;
 
 import android.animation.ArgbEvaluator;
+import android.app.AlertDialog;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -9,6 +10,7 @@ import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 import com.example.watchit.Adapter.AdapterCard;
 import com.example.watchit.Model.Card;
@@ -24,11 +26,13 @@ public class BrowseFragment extends Fragment {
     AdapterCard adapterCard;
     Integer[] colors = null;
     ArgbEvaluator argbEvaluator = new ArgbEvaluator();
+    private int currentPage;
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_browse,container,false);
+        final View view = inflater.inflate(R.layout.fragment_browse,container,false);
+
         cards = new ArrayList<>();
         cards.add(new Card(R.drawable.alita,"Alita : Battle Angel",1,11));
         cards.add(new Card(R.drawable.avatar,"Avatar",2,22));
@@ -58,13 +62,26 @@ public class BrowseFragment extends Fragment {
             }
 
             @Override
-            public void onPageSelected(int i) {
-
+            public void onPageSelected(final int i) {
+                currentPage = i;
             }
 
             @Override
             public void onPageScrollStateChanged(int i) {
 
+            }
+        });
+
+        Button btWatchlist = view.findViewById(R.id.btWatchlist);
+        btWatchlist.setOnClickListener(new ViewPager.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String text = cards.get(currentPage).getTitle();
+                AlertDialog.Builder builder = new AlertDialog.Builder(view.getContext());
+
+                builder.setTitle("Added to watchlist");
+                builder.setMessage(text);
+                builder.show();
             }
         });
 
