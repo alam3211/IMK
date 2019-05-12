@@ -18,7 +18,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/imageView3"
-        android:text="Aqua the Revieman"
+        android:text="Aqua the Reviewman"
         android:paddingHorizontal="80dp"
         android:layout_marginTop="16dp"
         android:textColor="#FFFFFF"

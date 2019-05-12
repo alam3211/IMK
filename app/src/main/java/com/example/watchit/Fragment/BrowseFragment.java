@@ -2,6 +2,7 @@ package com.example.watchit.Fragment;
 
 import android.animation.ArgbEvaluator;
 import android.app.AlertDialog;
+import android.app.Dialog;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -11,6 +12,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.RatingBar;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.watchit.Adapter.AdapterCard;
 import com.example.watchit.Model.Card;
@@ -73,6 +77,8 @@ public class BrowseFragment extends Fragment {
         });
 
         Button btWatchlist = view.findViewById(R.id.btWatchlist);
+        Button btRate = view.findViewById(R.id.btRate);
+
         btWatchlist.setOnClickListener(new ViewPager.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -82,6 +88,32 @@ public class BrowseFragment extends Fragment {
                 builder.setTitle("Added to watchlist");
                 builder.setMessage(text);
                 builder.show();
+            }
+        });
+
+        btRate.setOnClickListener(new ViewPager.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                final Dialog rankDialog = new Dialog(view.getContext(), R.style.FullHeightDialog);
+                rankDialog.setContentView(R.layout.rank_dialog);
+                rankDialog.setCancelable(true);
+                RatingBar ratingBar = rankDialog.findViewById(R.id.dialog_ratingbar);
+                ratingBar.setRating(0);
+
+                TextView text = (TextView) rankDialog.findViewById(R.id.rank_dialog_text1);
+                text.setText("Rating for " + cards.get(currentPage).getTitle() + ": ");
+
+                Button updateButton = (Button) rankDialog.findViewById(R.id.rank_dialog_button);
+                updateButton.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        rankDialog.dismiss();
+                        Toast t = Toast.makeText(view.getContext(),"Thanks for rating",Toast.LENGTH_SHORT);
+                        t.show();
+                    }
+                });
+                //now that the dialog is set up, it's time to show it
+                rankDialog.show();
             }
         });
 
