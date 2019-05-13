@@ -76,8 +76,8 @@ public class BrowseFragment extends Fragment {
             }
         });
 
-        Button btWatchlist = view.findViewById(R.id.btWatchlist);
-        Button btRate = view.findViewById(R.id.btRate);
+        final Button btWatchlist = view.findViewById(R.id.btWatchlist);
+        final Button btRate = view.findViewById(R.id.btRate);
 
         btWatchlist.setOnClickListener(new ViewPager.OnClickListener() {
             @Override
@@ -88,6 +88,8 @@ public class BrowseFragment extends Fragment {
                 builder.setTitle("Added to watchlist");
                 builder.setMessage(text);
                 builder.show();
+                btWatchlist.setEnabled(false);
+                btWatchlist.setText("Added to watchlist");
             }
         });
 
@@ -110,6 +112,8 @@ public class BrowseFragment extends Fragment {
                         rankDialog.dismiss();
                         Toast t = Toast.makeText(view.getContext(),"Thanks for rating",Toast.LENGTH_SHORT);
                         t.show();
+                        btRate.setEnabled(false);
+                        btRate.setText("Rated");
                     }
                 });
                 //now that the dialog is set up, it's time to show it
