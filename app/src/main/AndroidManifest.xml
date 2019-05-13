@@ -26,6 +26,8 @@
         <activity android:name=".Activity.DetailActivity"/>
 
         <activity android:name=".Activity.EditActivity"/>
+
+        <activity android:name=".Activity.HelpActivity"/>
     </application>
 
 </manifest>

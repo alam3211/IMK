@@ -44,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
         btnTwitter.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent indexIntent = new Intent(MainActivity.this,IndexActivity.class);
+                Intent indexIntent = new Intent(MainActivity.this,HelpActivity.class);
                 startActivity(indexIntent);
             }
         });
@@ -53,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
         btnFacebook.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent indexIntent = new Intent(MainActivity.this,IndexActivity.class);
+                Intent indexIntent = new Intent(MainActivity.this,HelpActivity.class);
                 startActivity(indexIntent);
             }
         });
@@ -62,7 +62,7 @@ public class MainActivity extends AppCompatActivity {
         btnGoogle.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent indexIntent = new Intent(MainActivity.this,IndexActivity.class);
+                Intent indexIntent = new Intent(MainActivity.this,HelpActivity.class);
                 startActivity(indexIntent);
             }
         });
@@ -74,7 +74,7 @@ public class MainActivity extends AppCompatActivity {
                 checkDataToast();
                 if (!isEmpty(etPassword) && !isEmpty(etUsername)){
                     Intent indexIntent;
-                    indexIntent = new Intent(MainActivity.this,IndexActivity.class);
+                    indexIntent = new Intent(MainActivity.this,HelpActivity.class);
                     startActivity(indexIntent);
                 }
             }

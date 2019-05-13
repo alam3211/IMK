@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginHorizontal="32dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hello First Timer !"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:textSize="32dp"
+            android:textStyle="bold"
+            android:textColor="#fff"
+            android:layout_marginVertical="32dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="In this apps, you will get 4 main features ! lets get started !"
+            android:layout_marginBottom="16dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1. Rate It"
+            android:textStyle="bold"
+            android:textSize="18dp"
+            android:textColor="#fff"
+            />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_marginBottom="8dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="You can easily rate the film that you want! simply push that button and you can rate the film as you like."
+                android:layout_weight="200"
+                android:layout_marginRight="16dp"
+                android:textAlignment="viewStart"
+                />
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="6dp"
+                android:background="@drawable/rounded_red_buttons"
+                android:drawableStart="@drawable/ic_star_white_24dp"
+                android:gravity="center"
+                android:paddingHorizontal="10dp"
+                android:text=" Rate It"
+                android:textColor="#fff" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2. Watched"
+            android:textStyle="bold"
+            android:textSize="18dp"
+            android:textColor="#fff"
+            />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:layout_marginBottom="8dp"
+            android:gravity="center">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Have you watched the film? just mark it ! you can list all of the film that you have been watched in just one click and let the other knows you already watch that film !"
+                android:layout_weight="200"
+                android:layout_marginRight="16dp"
+                android:textAlignment="viewStart"
+                />
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="6dp"
+                android:background="@drawable/rounded_black_buttons"
+                android:drawableStart="@drawable/ic_remove_red_eye_black_24dp"
+                android:gravity="center"
+                android:paddingHorizontal="10dp"
+                android:text=" Watched"
+                android:textColor="#fff" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3. Review"
+            android:textStyle="bold"
+            android:textSize="18dp"
+            android:textColor="#fff"
+            />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:layout_marginBottom="8dp"
+            android:gravity="center">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="You must be have something story to tell about the film right? you can do your own review in our Apps, just push that review and you can pour all of your opinion about the film !"
+                android:layout_weight="200"
+                android:layout_marginRight="16dp"
+                android:textAlignment="viewStart"
+                />
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="6dp"
+                android:background="@drawable/rounded_brown_buttons"
+                android:drawableStart="@drawable/ic_rate_review_black_24dp"
+                android:gravity="center"
+                android:paddingHorizontal="10dp"
+                android:text=" Review"
+                android:textColor="#fff" />
+
+        </LinearLayout>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="4. Watchlist"
+            android:textStyle="bold"
+            android:textSize="18dp"
+            android:textColor="#fff"
+            />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:layout_marginBottom="8dp"
+            android:gravity="center">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Go mark your waiting list film ! we afford you to list all of your dreamlist in single touch. Just find this button okay !"
+                android:layout_weight="200"
+                android:layout_marginRight="16dp"
+                android:textAlignment="viewStart"
+                />
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="6dp"
+                android:background="@drawable/rounded_push_buttons"
+                android:drawableStart="@drawable/ic_playlist_add_black_24dp"
+                android:gravity="center"
+                android:paddingHorizontal="10dp"
+                android:text=" Watchlist"
+                android:textColor="#fff" />
+
+        </LinearLayout>
+
+
+        <Button
+            android:id="@+id/btnUnderstand"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="48dp"
+            android:layout_marginVertical="64dp"
+
+            android:background="@drawable/rounded_black_buttons"
+            android:text="Completely Understand !" />
+    </LinearLayout>
+</ScrollView>
