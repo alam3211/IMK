@@ -18,7 +18,8 @@ public class IndexActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_index);
-
+        Fragment selectedFragment = new HomeFragment();
+        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,selectedFragment).commit();
         BottomNavigationView bottonNav = findViewById(R.id.bottom_navigation);
         bottonNav.setOnNavigationItemSelectedListener(navListener);
     }
@@ -28,6 +29,7 @@ public class IndexActivity extends AppCompatActivity {
                 @Override
                 public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
                     Fragment selectedFragment = null;
+
                     switch (menuItem.getItemId()){
                         case R.id.nav_home:
                             selectedFragment = new HomeFragment();
