@@ -3,6 +3,8 @@ package com.example.watchit.Fragment;
 import android.animation.ArgbEvaluator;
 import android.app.AlertDialog;
 import android.app.Dialog;
+import android.content.DialogInterface;
+import android.graphics.PorterDuff;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -12,6 +14,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.RatingBar;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -48,7 +51,7 @@ public class BrowseFragment extends Fragment {
         viewPager.setAdapter(adapterCard);
         viewPager.setPadding(130,0,130,0);
 
-        Integer[] colors_temp = {getResources().getColor(R.color.colorPrimary)};
+        final Integer[] colors_temp = {getResources().getColor(R.color.colorPrimary)};
         colors = colors_temp;
         viewPager.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
@@ -79,6 +82,7 @@ public class BrowseFragment extends Fragment {
         final Button btWatchlist = view.findViewById(R.id.btWatchlist);
         final Button btRate = view.findViewById(R.id.btRate);
         final Button btWatched = view.findViewById(R.id.btWatched);
+        final Button btReview = view.findViewById(R.id.btReview);
 
         btWatchlist.setOnClickListener(new ViewPager.OnClickListener() {
             @Override
@@ -119,6 +123,36 @@ public class BrowseFragment extends Fragment {
                 });
                 //now that the dialog is set up, it's time to show it
                 rankDialog.show();
+            }
+        });
+
+        btReview.setOnClickListener(new ViewPager.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String text = cards.get(currentPage).getTitle();
+                final EditText taskEditText = new EditText(view.getContext());
+                taskEditText.getBackground().mutate().setColorFilter(getResources().getColor(R.color.colorForm), PorterDuff.Mode.SRC_ATOP);
+                AlertDialog dialog = new AlertDialog.Builder(view.getContext())
+                        .setTitle("Create a review")
+                        .setMessage(text)
+                        .setView(taskEditText)
+                        .setPositiveButton("Submit", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                String task = String.valueOf(taskEditText.getText());
+                                Toast t = Toast.makeText(view.getContext(),"Thanks for reviewing",Toast.LENGTH_SHORT);
+                                t.show();
+                                btReview.setEnabled(false);
+                                btReview.setText("Reviewed");
+                            }
+                        })
+                        .setNegativeButton("Cancel", null)
+                        .create();
+                dialog.show();
+                Button nbutton = dialog.getButton(DialogInterface.BUTTON_NEGATIVE);
+                nbutton.setTextColor(getResources().getColor(R.color.colorForm));
+                Button pbutton = dialog.getButton(DialogInterface.BUTTON_POSITIVE);
+                pbutton.setTextColor(getResources().getColor(R.color.colorForm));
             }
         });
 
