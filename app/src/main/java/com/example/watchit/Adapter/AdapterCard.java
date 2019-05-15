@@ -14,17 +14,22 @@ import com.example.watchit.Activity.DetailActivity;
 import com.example.watchit.Model.Card;
 import com.example.watchit.R;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 
 public class AdapterCard extends PagerAdapter {
 
     private List<Card> cards;
+    private ArrayList<Card> arraylist;
     private LayoutInflater layoutInflater;
     private Context context;
 
     public AdapterCard(List<Card> cards, Context context) {
         this.cards = cards;
         this.context = context;
+        this.arraylist = new ArrayList<Card>();
+        this.arraylist.addAll(cards);
     }
 
     @Override
@@ -79,5 +84,20 @@ public class AdapterCard extends PagerAdapter {
     @Override
     public void destroyItem(@NonNull ViewGroup container, int position, @NonNull Object object) {
         container.removeView((View)object);
+    }
+
+    public void filter(String charText) {
+        charText = charText.toLowerCase(Locale.getDefault());
+        cards.clear();
+        if (charText.length() == 0) {
+            cards.addAll(arraylist);
+        } else {
+            for (Card wp : arraylist) {
+                if (wp.getTitle().toLowerCase(Locale.getDefault()).contains(charText)) {
+                    cards.add(wp);
+                }
+            }
+        }
+        notifyDataSetChanged();
     }
 }

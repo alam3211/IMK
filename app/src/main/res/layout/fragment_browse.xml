@@ -3,12 +3,21 @@
     android:layout_width="match_parent" android:layout_height="match_parent"
     android:background="@color/colorPrimary">
 
+    <SearchView
+        android:id="@+id/search"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:iconifiedByDefault="false"
+        android:queryHint="Search here"> <!-- set iconified by default to false -->
+        <requestFocus />
+    </SearchView>
+
     <android.support.v4.view.ViewPager
         android:id="@+id/ViewPager"
         android:layout_width="match_parent"
-        android:layout_height="547dp"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="50dp"
+        android:layout_height="410dp"
+        android:layout_above="@+id/llBrowse1"
+        android:layout_marginBottom="40dp"
         android:clipToPadding="false"
         android:foregroundGravity="center"
         android:overScrollMode="never"></android.support.v4.view.ViewPager>

@@ -3,9 +3,7 @@ package com.example.watchit.Fragment;
 import android.animation.ArgbEvaluator;
 import android.app.AlertDialog;
 import android.app.Dialog;
-import android.content.DialogInterface;
 import android.content.Intent;
-import android.graphics.PorterDuff;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -15,8 +13,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.RatingBar;
+import android.widget.SearchView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -28,7 +26,7 @@ import com.example.watchit.R;
 import java.util.ArrayList;
 import java.util.List;
 
-public class BrowseFragment extends Fragment {
+public class BrowseFragment extends Fragment{
 
     ViewPager viewPager;
     List<Card> cards;
@@ -36,6 +34,7 @@ public class BrowseFragment extends Fragment {
     Integer[] colors = null;
     ArgbEvaluator argbEvaluator = new ArgbEvaluator();
     private int currentPage;
+    SearchView editsearch;
 
     @Nullable
     @Override
@@ -52,6 +51,11 @@ public class BrowseFragment extends Fragment {
         viewPager = view.findViewById(R.id.ViewPager);
         viewPager.setAdapter(adapterCard);
         viewPager.setPadding(130,0,130,0);
+
+//        editsearch = (SearchView) view.findViewById(R.id.search);
+//        editsearch.setOnSearchClickListener(new View.OnClickListener(){
+//
+//        });
 
         final Integer[] colors_temp = {getResources().getColor(R.color.colorPrimary)};
         colors = colors_temp;
