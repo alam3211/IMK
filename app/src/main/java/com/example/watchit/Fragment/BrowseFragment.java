@@ -78,6 +78,7 @@ public class BrowseFragment extends Fragment {
 
         final Button btWatchlist = view.findViewById(R.id.btWatchlist);
         final Button btRate = view.findViewById(R.id.btRate);
+        final Button btWatched = view.findViewById(R.id.btWatched);
 
         btWatchlist.setOnClickListener(new ViewPager.OnClickListener() {
             @Override
@@ -118,6 +119,19 @@ public class BrowseFragment extends Fragment {
                 });
                 //now that the dialog is set up, it's time to show it
                 rankDialog.show();
+            }
+        });
+
+        btWatched.setOnClickListener(new ViewPager.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String text = cards.get(currentPage).getTitle();
+                AlertDialog.Builder builder = new AlertDialog.Builder(view.getContext());
+
+                builder.setTitle("Added to watched");
+                builder.setMessage(text);
+                builder.show();
+                btWatched.setEnabled(false);
             }
         });
 
