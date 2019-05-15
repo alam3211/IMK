@@ -9,7 +9,7 @@
         android:id="@+id/imageView4"
         android:layout_width="186dp"
         android:layout_height="275dp"
-        android:layout_marginStart="24dp"
+        android:layout_marginStart="4dp"
         android:layout_marginTop="28dp"
         android:src="@drawable/alitaposter"
         app:layout_constraintCircleRadius="10dp"
@@ -28,7 +28,7 @@
         android:textColor="#fff"
         android:textSize="18dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.387"
+        app:layout_constraintHorizontal_bias="0.711"
         app:layout_constraintStart_toEndOf="@+id/imageView4"
         app:layout_constraintTop_toTopOf="parent" />
 

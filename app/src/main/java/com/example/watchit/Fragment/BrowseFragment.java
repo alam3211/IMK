@@ -4,6 +4,7 @@ import android.animation.ArgbEvaluator;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.graphics.PorterDuff;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -19,6 +20,7 @@ import android.widget.RatingBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.watchit.Activity.ReviewActivity;
 import com.example.watchit.Adapter.AdapterCard;
 import com.example.watchit.Model.Card;
 import com.example.watchit.R;
@@ -129,30 +131,10 @@ public class BrowseFragment extends Fragment {
         btReview.setOnClickListener(new ViewPager.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String text = cards.get(currentPage).getTitle();
-                final EditText taskEditText = new EditText(view.getContext());
-                taskEditText.getBackground().mutate().setColorFilter(getResources().getColor(R.color.colorForm), PorterDuff.Mode.SRC_ATOP);
-                AlertDialog dialog = new AlertDialog.Builder(view.getContext())
-                        .setTitle("Create a review")
-                        .setMessage(text)
-                        .setView(taskEditText)
-                        .setPositiveButton("Submit", new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialog, int which) {
-                                String task = String.valueOf(taskEditText.getText());
-                                Toast t = Toast.makeText(view.getContext(),"Thanks for reviewing",Toast.LENGTH_SHORT);
-                                t.show();
-                                btReview.setEnabled(false);
-                                btReview.setText("Reviewed");
-                            }
-                        })
-                        .setNegativeButton("Cancel", null)
-                        .create();
-                dialog.show();
-                Button nbutton = dialog.getButton(DialogInterface.BUTTON_NEGATIVE);
-                nbutton.setTextColor(getResources().getColor(R.color.colorForm));
-                Button pbutton = dialog.getButton(DialogInterface.BUTTON_POSITIVE);
-                pbutton.setTextColor(getResources().getColor(R.color.colorForm));
+
+                Intent reviewLayout = new Intent(getContext(), ReviewActivity.class);
+                getContext().startActivity(reviewLayout);
+
             }
         });
 

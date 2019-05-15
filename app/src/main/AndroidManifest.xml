@@ -28,6 +28,8 @@
         <activity android:name=".Activity.EditActivity"/>
 
         <activity android:name=".Activity.HelpActivity"/>
+
+        <activity android:name=".Activity.ReviewActivity"/>
     </application>
 
 </manifest>

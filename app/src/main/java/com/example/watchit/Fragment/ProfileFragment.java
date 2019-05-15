@@ -20,16 +20,14 @@ public class ProfileFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_profile,container,false);
-
         btnEditProfile = view.findViewById(R.id.btnEditProfile);
         btnEditProfile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 Intent editFragment = new Intent(getContext(), EditActivity.class);
                 getContext().startActivity(editFragment);
             }
         });
-        return inflater.inflate(R.layout.fragment_profile,container,false);
+        return view;
     }
 }

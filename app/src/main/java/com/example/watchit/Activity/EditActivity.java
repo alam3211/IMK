@@ -1,5 +1,6 @@
 package com.example.watchit.Activity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -8,6 +9,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.watchit.Fragment.ProfileFragment;
 import com.example.watchit.R;
@@ -29,12 +31,13 @@ public class EditActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 String newUsername = etEditUsername.getText().toString();
-                tvUsername.setText(newUsername);
-
-                Fragment selectedFragment = new ProfileFragment();
-
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,selectedFragment).commit();
+                showToast();
             }
         });
+    }
+
+    protected void showToast(){
+        Toast t = Toast.makeText(this,"Edit Profile Success",Toast.LENGTH_SHORT);
+        t.show();
     }
 }
