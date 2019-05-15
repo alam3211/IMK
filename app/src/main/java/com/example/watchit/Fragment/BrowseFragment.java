@@ -21,6 +21,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.watchit.Activity.ReviewActivity;
+import com.example.watchit.Activity.SearchActivity;
 import com.example.watchit.Adapter.AdapterCard;
 import com.example.watchit.Model.Card;
 import com.example.watchit.R;
@@ -51,7 +52,7 @@ public class BrowseFragment extends Fragment {
         adapterCard = new AdapterCard(cards,this.getContext());
         viewPager = view.findViewById(R.id.ViewPager);
         viewPager.setAdapter(adapterCard);
-        viewPager.setPadding(130,0,130,0);
+        viewPager.setPadding(130,110,130,0);
 
         final Integer[] colors_temp = {getResources().getColor(R.color.colorPrimary)};
         colors = colors_temp;
@@ -85,7 +86,14 @@ public class BrowseFragment extends Fragment {
         final Button btRate = view.findViewById(R.id.btRate);
         final Button btWatched = view.findViewById(R.id.btWatched);
         final Button btReview = view.findViewById(R.id.btReview);
+        final Button btSearch = view.findViewById(R.id.button_search);
 
+        btSearch.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent searchLayout = new Intent(getContext(), SearchActivity.class);
+                getContext().startActivity(searchLayout);
+            }
+        });
         btWatchlist.setOnClickListener(new ViewPager.OnClickListener() {
             @Override
             public void onClick(View v) {
